@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeTwoSortedArrays", "MergeTwoSortedArrays\MergeTwoSortedArrays.csproj", "{9AFDB8A3-6FD3-4609-954A-9DA49B4F34D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AFDB8A3-6FD3-4609-954A-9DA49B4F34D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFDB8A3-6FD3-4609-954A-9DA49B4F34D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFDB8A3-6FD3-4609-954A-9DA49B4F34D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFDB8A3-6FD3-4609-954A-9DA49B4F34D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {330A399A-4F07-45C7-B7D8-9DD498CD5324}
+	EndGlobalSection
+EndGlobal
