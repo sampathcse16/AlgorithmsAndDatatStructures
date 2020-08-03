@@ -9,3 +9,12 @@ BubbleSort/BubbleSort/.vs/
 BubbleSort/BubbleSort/BubbleSort/bin/
 BubbleSort/BubbleSort/BubbleSort/obj/
 QuickSort/QuickSort/.vs/
+SelectionSort/SelectionSort/.vs/
+*.json
+*.dll
+*.exe
+*.pdb
+*.cache
+*.props
+*.targets
+SelectionSort/SelectionSort/SelectionSort/obj/
