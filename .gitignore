@@ -18,3 +18,5 @@ SelectionSort/SelectionSort/.vs/
 *.props
 *.targets
 SelectionSort/SelectionSort/SelectionSort/obj/
+*.suo
+InsertionSort/InsertionSort/obj/
