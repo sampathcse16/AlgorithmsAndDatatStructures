@@ -20,3 +20,6 @@ SelectionSort/SelectionSort/.vs/
 SelectionSort/SelectionSort/SelectionSort/obj/
 *.suo
 InsertionSort/InsertionSort/obj/
+InsertionSort/.vs/
+MergeSort/.vs/
+MergeSort/MergeSort/obj/
