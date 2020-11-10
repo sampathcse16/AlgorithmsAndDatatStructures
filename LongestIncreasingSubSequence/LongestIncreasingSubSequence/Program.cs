@@ -11,7 +11,7 @@ namespace LongestIncreasingSubSequence
             int l = 0;
             int r = output.Count - 1;
 
-            while (l<=r)
+            while (l <= r)
             {
                 int mid = (l + r) / 2;
 
@@ -54,33 +54,43 @@ namespace LongestIncreasingSubSequence
 
             return false;
         }
-       
+
         public static List<int> LongestIncreasingSubSequence(int[] input)
         {
             List<int> output = new List<int>();
-            Dictionary<int,int> dictionary = new Dictionary<int, int>();
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
 
             for (int i = 0; i < input.Length; i++)
             {
                 if (output.Count == 0)
                 {
                     output.Add(input[i]);
-                    dictionary.Add(input[i], Int32.MinValue);
+                    dictionary[input[i]] = Int32.MinValue;
                 }
                 else
                 {
-                    if (input[i] > output.Last())
+                    if (!IsElementExist(output, input[i]))
                     {
-                        output.Add(input[i]);
-                        dictionary.Add(input[i], output[output.Count-2]);
-                    }
-                    else
-                    {
-                        if (!IsElementExist(output, input[i]))
+                        if (input[i] > output.Last())
+                        {
+                            output.Add(input[i]);
+                            dictionary[input[i]] = output[output.Count - 2];
+                        }
+                        else
                         {
                             int position = GetRightPosition(output, input[i]);
+
                             output[position] = input[i];
-                            dictionary.Add(input[i], output[position - 1]);
+
+                            if (position == 0)
+                            {
+                                dictionary[input[i]] = Int32.MinValue;
+                            }
+                            else
+                            {
+                                dictionary[input[i]] = output[position - 1];
+                            }
+
                         }
                     }
                 }
@@ -89,7 +99,7 @@ namespace LongestIncreasingSubSequence
             int lastElement = output.Last();
             List<int> finalResult = new List<int>();
 
-            while (lastElement!=Int32.MinValue)
+            while (lastElement != Int32.MinValue)
             {
                 finalResult.Add(lastElement);
                 lastElement = dictionary[lastElement];
