@@ -4,32 +4,29 @@ namespace MergeTwoSortedArrays
 {
     class Program
     {
-        public static int[] MergeTwoSortedArrays(int[] A, int[] B)
+       public static int[] MergeTwoSortedArrays(int[] A, int[] B)
+{
+    int[] C = new int[A.Length + B.Length];
+
+    int indexA = 0;
+    int indexB = 0;
+
+    for (int i = 0; i < C.Length; i++)
+    {
+        if (indexA < A.Length && (indexB == B.Length || A[indexA] <= B[indexB]))
         {
-            int[] C = new int[A.Length+B.Length];
-
-            int indexA = 0;
-            int indexB = 0;
-
-            for (int i = 0; i < C.Length; i++)
-            {
-                if (indexA<A.Length || indexB == B.Length && A[indexA] <= B[indexB])
-                {
-                    C[i] = A[indexA];
-                    indexA++;
-                }
-                else
-                {
-                    if (indexB < B.Length)
-                    {
-                        C[i] = B[indexB];
-                        indexB++;
-                    }
-                }
-            }
-
-            return C;
+            C[i] = A[indexA];
+            indexA++;
         }
+        else
+        {
+            C[i] = B[indexB];
+            indexB++;
+        }
+    }
+
+    return C;
+}
 
         static void Main(string[] args)
         {
