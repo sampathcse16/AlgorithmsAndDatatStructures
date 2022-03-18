@@ -17,12 +17,11 @@ namespace MergeTwoSortedArrays
                 {
                     C[i] = A[indexA];
                     indexA++;
+                    continue;
                 }
-                else
-                {
-                    C[i] = B[indexB];
-                    indexB++;
-                }
+        
+                C[i] = B[indexB];
+                indexB++;
             }
         
             return C;
